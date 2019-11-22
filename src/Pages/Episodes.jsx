@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 
 })
 
-const Episodes = () => {
+const Episodes = (props) => {
     const classes = useStyles()
     const episodes = [
         {
@@ -60,7 +60,10 @@ const Episodes = () => {
     return(
         <div className={classes.home}>
             <h3 className={classes.prompt}>Choose Your Episode</h3>
-            <Carousel items={episodes} />
+            <Carousel items={episodes} 
+                      updateData={props.updateData}
+                      updateImage={props.updateImage}
+            />
         </div>
     )
 }

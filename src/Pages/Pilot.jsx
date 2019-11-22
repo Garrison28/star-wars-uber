@@ -3,7 +3,7 @@ import Carousel from '../Components/Carousel';
 import axios from 'axios';
 import { PILOTS_URL } from '../constants';
 
-const Pilot = () => {
+const Pilot = (props) => {
     const pilots = [
         {
             name: 'Episode 1: The Phantom Menace',
@@ -42,8 +42,11 @@ const Pilot = () => {
             image: '/episodes/episode9.jpg'
         }
     ]
-    return(
-        <Carousel items={pilots} />
+    return (
+        <Carousel items={pilots}
+            updateData={props.updateData}
+            updateImage={props.updateImage}
+        />
     )
 }
 
