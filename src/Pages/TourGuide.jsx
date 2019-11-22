@@ -42,12 +42,28 @@ const TourGuide = () => {
             image: '/guides/Leia.jpeg'
         },
         {
+            name: 'Jyn',
+            image: '/guides/Jyn.jpg'
+        },
+        {
+            name: 'Luke Skywalker',
+            image: '/guides/luke-skywalker-old.png'
+        },
+        {
             name: 'Maz Kanata',
             image: '/guides/maz-kanata.jpeg'
         },
         {
             name: 'Plo Koon',
             image: '/guides/plo-koon.png'
+        },
+        {
+            name: 'Lando Calrissian',
+            image: '/guides/Lando-Calrissian.png'
+        },
+        {
+            name: 'Nien Nunb',
+            image: '/guides/nien-nunb.jpeg'
         },
         {
             name: 'Ric Olie',

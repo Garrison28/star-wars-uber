@@ -24,6 +24,7 @@ const useStyles = makeStyles({
 })
 
 const Pilot = (props) => {
+    const classes = useStyles()
     const pilots = [
         {
             name: 'Arvel Crynyd',
@@ -62,21 +63,41 @@ const Pilot = (props) => {
             image: '/pilots/Han-solo-old.png'
         },
         {
-            name: 'Rey',
-            image: '/pilots/Rey.jpeg'
+            name: 'Leia',
+            image: '/pilots/Leia.jpeg'
         },
         {
-            name: 'Jyn',
-            image: '/pilots/Jyn.jpg'
+            name: 'Young Luke Skywalker',
+            image: '/pilots/luke-skywalker-young.jpg'
+        },
+        {
+            name: 'Obi Wan ',
+            image: '/pilots/obi-wan.jpg'
+        },
+        {
+            name: 'Padme Amidala',
+            image: '/pilots/padme-amidala.png'
+        },
+        {
+            name: 'Poe Dameron',
+            image: '/pilots/poe-dameron.jpg'
+        },
+        {
+            name: 'Rey',
+            image: '/pilots/Rey.jpeg'
         },
 
     ]
     return (
         <>
+        <h3 className={classes.prompt}>Choose Your Pilot</h3>
             <Carousel items={pilots}
                 updateData={props.updateData}
                 updateImage={props.updateImage}
-            />
+            /><br />
+            <a href="/starship">
+                <Button className={classes.button}>Choose your Pilot!</Button>
+            </a>
         </>
     )
 }
