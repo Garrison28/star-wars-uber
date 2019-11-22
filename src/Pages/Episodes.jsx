@@ -1,9 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from '../Components/Carousel';
+import { makeStyles } from '@material-ui/styles';
 import axios from 'axios';
 import { EPISODES_URL } from '../constants';
 
+const useStyles = makeStyles({
+    home: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    prompt: {
+        color: 'white',
+    },
+
+})
+
 const Episodes = () => {
+    const classes = useStyles()
     const episodes = [
         {
             name: 'Episode 1: The Phantom Menace',
@@ -43,7 +58,10 @@ const Episodes = () => {
         }
     ]
     return(
-        <Carousel items={episodes} />
+        <div className={classes.home}>
+            <h3 className={classes.prompt}>Choose Your Episode</h3>
+            <Carousel items={episodes} />
+        </div>
     )
 }
 

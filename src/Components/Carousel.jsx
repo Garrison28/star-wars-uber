@@ -4,6 +4,32 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles({
+    carousel: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    carouselImage: {
+        width: '80vw',
+        borderStyle: 'solid',
+        borderColor: '#2E88D1',
+    },
+    name: {
+        color: 'white',
+    },
+    prevItem:{
+        color: 'white',
+    },
+    nextItem:{
+        color: 'white',
+    },
+    carouselContent: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
 
 })
 
@@ -37,10 +63,12 @@ const Carousel = (props) => {
     }
 
     return (
-        <div>
+        <div className={classes.carousel}>
             <ChevronLeftIcon className={classes.prevItem} onClick={prevItem} />
-            <img className={classes.carouselImage} src={current.image} />
-            <h1>{current.name}</h1>
+            <div className={classes.carouselContent}>
+                <h4 className={classes.name}>{current.name}</h4>
+                <img className={classes.carouselImage} src={current.image} />
+            </div>
             <ChevronRightIcon className={classes.nextItem} onClick={nextItem} />
         </div>
     )
