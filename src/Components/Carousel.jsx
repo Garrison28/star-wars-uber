@@ -13,25 +13,25 @@ const Carousel = (props) => {
     const [current, setCurrent] = useState({});
 
     useEffect(() => {
-        setCurrent()
+        setCurrent(props.items[carouselIndex])
     })
 
     const nextItem = () => {
-        if (carouselIndex >= -1) {
-            setCarouselIndex(carouselIndex - 1)
+        if (carouselIndex >= props.items.length - 1) {
+            setCarouselIndex(0)
         }
         else {
-            setCarouselIndex(props.items.length - 1)
+            setCarouselIndex(carouselIndex + 1)
         }
         setCurrent(props.items[carouselIndex])
     }
 
     const prevItem = () => {
-        if (carouselIndex >= props.items.length - 1) {
-            setCarouselIndex(carouselIndex + 1)
+        if ( carouselIndex > 0) {
+            setCarouselIndex(carouselIndex - 1)
         }
         else {
-            setCarouselIndex(0)
+            setCarouselIndex(props.items.length - 1)
         }
         setCurrent(props.items[carouselIndex])
     }
