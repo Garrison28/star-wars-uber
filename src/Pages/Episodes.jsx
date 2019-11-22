@@ -16,14 +16,14 @@ const useStyles = makeStyles({
         color: 'white',
     },
     button: {
-      width: '90vw',
-      height: '10vh',
-      backgroundColor: '#2E88D1',
-  }
+        width: '90vw',
+        height: '10vh',
+        backgroundColor: '#2E88D1',
+    }
 
 })
 
-const Episodes = () => {
+const Episodes = (props) => {
     const classes = useStyles()
     const episodes = [
         {
@@ -63,13 +63,14 @@ const Episodes = () => {
             image: '/episodes/episode9.jpg'
         }
     ]
-    return(
+    return (
         <div className={classes.home}>
             <h3 className={classes.prompt}>Choose Your Episode</h3>
-            <Carousel items={episodes} /><br />
-            <a href="/pilot">
-                <Button className={classes.button}>Choose your episode!</Button>
-            </a>
+            <Carousel items={episodes}
+                updateData={props.updateData}
+                updateImage={props.updateImage}
+            />
+
         </div>
     )
 }

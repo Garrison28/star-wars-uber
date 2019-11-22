@@ -4,16 +4,18 @@ import axios from 'axios';
 import { PLANET_URL } from '../constants';
 
 
-const Planet = () => {
+const Planet = (props) => {
     const [planets, setPlanets] = useState([])
     useEffect(() => {
         axios.get(PLANET_URL)
-        .then((response) => {
-            setPlanets(response.data)
-        })
+            .then((response) => {
+                setPlanets(response.data)
+            })
     }, [])
-    return(
-        <Carousel items={planets} />
+    return (
+        <Carousel items={planets}
+            updateData={props.updateData}
+            updateImage={props.updateImage} />
     )
 }
 

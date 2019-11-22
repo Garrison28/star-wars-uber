@@ -5,25 +5,7 @@ import Button from '@material-ui/core/Button';
 import axios from 'axios';
 import { PILOTS_URL } from '../constants';
 
-const useStyles = makeStyles({
-    home: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    prompt: {
-        color: 'white',
-    },
-    button: {
-        width: '90vw',
-        height: '10vh',
-        backgroundColor: '#2E88D1',
-    }
-})
-
-const Pilot = () => {
-    const classes = useStyles()
+const Pilot = (props) => {
     const pilots = [
         {
             name: 'Arvel Crynyd',
@@ -64,13 +46,10 @@ const Pilot = () => {
 
     ]
     return (
-        <div>
-            <h3 className={classes.prompt}>Choose Your Pilot!</h3>
-            <Carousel items={pilots} /><br />
-            <a href="/starship">
-                <Button className={classes.button}>Choose your Pilot!</Button>
-            </a>
-        </div>
+        <Carousel items={pilots}
+            updateData={props.updateData}
+            updateImage={props.updateImage}
+        />
     )
 }
 

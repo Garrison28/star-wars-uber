@@ -62,10 +62,15 @@ const Carousel = (props) => {
         setCurrent(props.items[carouselIndex])
     }
 
+    const handleClick = () => {
+        props.updateData(current.name)
+        props.updateImage(current.image)
+    }
+
     return (
         <div className={classes.carousel}>
             <ChevronLeftIcon className={classes.prevItem} onClick={prevItem} />
-            <div className={classes.carouselContent}>
+            <div className={classes.carouselContent} onClick={handleClick}>
                 <h4 className={classes.name}>{current.name}</h4>
                 <img className={classes.carouselImage} src={current.image} />
             </div>
