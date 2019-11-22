@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from '../Components/Carousel';
 import { makeStyles } from '@material-ui/styles';
+import Button from '@material-ui/core/Button';
 import axios from 'axios';
 import { EPISODES_URL } from '../constants';
 
@@ -14,6 +15,11 @@ const useStyles = makeStyles({
     prompt: {
         color: 'white',
     },
+    button: {
+      width: '90vw',
+      height: '10vh',
+      backgroundColor: '#2E88D1',
+  }
 
 })
 
@@ -60,7 +66,10 @@ const Episodes = () => {
     return(
         <div className={classes.home}>
             <h3 className={classes.prompt}>Choose Your Episode</h3>
-            <Carousel items={episodes} />
+            <Carousel items={episodes} /><br />
+            <a href="/pilot">
+                <Button className={classes.button}>Choose your episode!</Button>
+            </a>
         </div>
     )
 }
