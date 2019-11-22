@@ -38,12 +38,8 @@ const TourGuide = () => {
             image: '/guides/gregor-typho.jpg'
         },
         {
-            name: 'Jyn',
-            image: '/guides/Jyn.jpg'
-        },
-        {
             name: 'Leia',
-            image: '/guides/leia.jpg'
+            image: '/guides/Leia.jpeg'
         },
         {
             name: 'Maz Kanata',
@@ -52,10 +48,6 @@ const TourGuide = () => {
         {
             name: 'Plo Koon',
             image: '/guides/plo-koon.png'
-        },
-        {
-            name: 'Rey',
-            image: '/guides/Rey.jpeg'
         },
         {
             name: 'Ric Olie',

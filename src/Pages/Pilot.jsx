@@ -5,6 +5,24 @@ import Button from '@material-ui/core/Button';
 import axios from 'axios';
 import { PILOTS_URL } from '../constants';
 
+const useStyles = makeStyles({
+    home: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    prompt: {
+        color: 'white',
+    },
+    button: {
+        width: '90vw',
+        height: '10vh',
+        backgroundColor: '#2E88D1',
+    }
+
+})
+
 const Pilot = (props) => {
     const pilots = [
         {
@@ -42,14 +60,24 @@ const Pilot = (props) => {
         {
             name: 'Old Han Solo',
             image: '/pilots/Han-solo-old.png'
-        }
+        },
+        {
+            name: 'Rey',
+            image: '/pilots/Rey.jpeg'
+        },
+        {
+            name: 'Jyn',
+            image: '/pilots/Jyn.jpg'
+        },
 
     ]
     return (
-        <Carousel items={pilots}
-            updateData={props.updateData}
-            updateImage={props.updateImage}
-        />
+        <>
+            <Carousel items={pilots}
+                updateData={props.updateData}
+                updateImage={props.updateImage}
+            />
+        </>
     )
 }
 
