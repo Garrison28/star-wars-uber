@@ -69,8 +69,10 @@ const Episodes = (props) => {
             <Carousel items={episodes}
                 updateData={props.updateData}
                 updateImage={props.updateImage}
-            />
-
+            /><br />
+            <a href="/pilot">
+                <Button className={classes.button}>Choose your Episode!</Button>
+            </a>
         </div>
     )
 }
