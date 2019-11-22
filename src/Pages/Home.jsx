@@ -4,7 +4,7 @@ const Home = () => {
     return(
         <div>
             <h3>Logo</h3>
-            <a href="/epsodes">Start</a>
+            <a href="/episodes">Start</a>
         </div>
     )
 }
