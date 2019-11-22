@@ -1,4 +1,5 @@
 import React from 'react';
+import Content from './Content';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {

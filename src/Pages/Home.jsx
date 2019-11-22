@@ -1,8 +1,12 @@
 import React from 'react';
 
 const Home = () => {
-    <h3>Welcome to our app!</h3>
-    <
+    return(
+        <div>
+            <h3>Logo</h3>
+            <a href="/epsodes">Start</a>
+        </div>
+    )
 }
 
 export default Home;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles({
 
@@ -36,7 +37,7 @@ const Carousel = (props) => {
     }
 
     return (
-        <div className={}>
+        <div>
             <ChevronLeftIcon className={classes.prevItem} onClick={prevItem} />
             <img className={classes.carouselImage} src={current.image} />
             <h1>{current.name}</h1>

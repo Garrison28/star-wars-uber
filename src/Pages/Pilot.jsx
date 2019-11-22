@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from '../Components/Carousel';
+import axios from 'axios';
+import { PILOTS_URL } from '../constants';
 
 const Pilot = () => {
     const [pilots, setPilots] = useState([])
